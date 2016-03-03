@@ -1,23 +1,208 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="MonoHelix">
+    <link rel="icon" href="favicon.ico">
 
-<div class="home">
+    <title>InsiderMap</title>
 
-  <h1 class="page-heading">Posts</h1>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  </head>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <body>
 
-</div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">InsiderMap</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navstyle">
+            <li class="active"><a href="#home">HOME</a></li>
+            <li><a href="#howitworks">HOW IT WORKS</a></li>
+            <li><a href="#aboutus">ABOUT US</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!--<div class="container">-->
+
+      <div id="home" class="home-block">
+        <h1>InsiderMap</h1>
+        <p class="lead">The map for the insiders.<br> All the buildings in one app. When you need it.</p>
+        <button type="button" class="btn btn-info">Available in the AppStore</button>
+      </div>
+
+      <div class="about-block">
+        <div class="col-md-3 col-md-offset-2">
+          <img class="img-responsive center-block" src="images/iphoneapp_cut.png" height="700px">
+        </div>
+        <div class="col-md-5">
+          <br/>
+          <h3><span class="light-grey-font">THE COMPANY MAP<br/>IN YOUR POCKET</span></h3>
+          <p class="lead">The app that gives you an overview of all the buildings in your campus. Helps you get to your meetings in time.</p>
+          <br/>
+          <h3><span class="light-grey-font">SEARCH</span></h3>
+          <p class="lead">Search for buildings by name or by facilities. Instantly. </p>
+          <br/>
+          <h3><span class="light-grey-font">GET DIRECTIONS</span></h3>
+          <p class="lead">Get walking, driving and transport directions from your current location to the building.</p>
+        </div>
+      </div>
+
+      <div class="usecase1-block">
+        <div class="col-md-6 col-md-offset-2">
+          <h4><span class="grey-font">FOR NEW EMPLOYEES</span></h4>
+          <h2>Get a head start!</h2>
+          <br/>
+          <p class="lead">Finding your way to all the intro meetings can be confusing.<br/>Why is building A7 next to A2 and then A5 is on the other side of the campus?</p>
+          <p class="lead">Search and discover. Search for building names or numbers, or for facilities such as the canteen, the fitness center, or the IT shop.</p>
+          <p class="lead">Helps you get to your meetings in time and make a good first impression.</p>
+
+        </div>
+        <div class="col-md-2">
+          <img class="img-responsive center-block" src="images/iphoneapp.png" height="300px">
+        </div>
+      </div>
+
+      <div class="usecase2-block">
+        <div class="col-md-2 col-md-offset-2">
+          <img class="img-responsive center-block" src="images/iphoneapp.png" height="300px">
+        </div>
+        <div class="col-md-6">
+          <h4><span class="light-grey-font">FOR EXTERNAL CONSULTANTS</span></h4>
+          <h2>Get the insider view!</h2>
+          <br/>
+          <p class="lead">Go to meetings like you know the place.</p>
+        </div>
+      </div>
+
+      <div class="usecase3-block">
+        <div class="col-md-6 col-md-offset-2">
+          <h4><span class="light-grey-font">FOR EVERYONE</span></h4>
+          <h2>Maps on the go!</h2>
+          <br/><br/>
+          <p class="lead">Forget about the frustration of finding a physical map of the campus. </p>
+          <p class="lead">Or spending time searching your intranet for the map. </p>
+          <p class="lead">The app is easy to use and always with you(r phone).</p> 
+          <p class="lead">Company specific InsiderMap apps are published within the Mobile Device Management system that protects your company data. <br/>So yes, your map is secure.</p> 
+        </div>
+        <div class="col-md-2">
+          <img class="img-responsive center-block" src="images/iphoneapp.png" height="300px">
+        </div>
+      </div>
+
+      <div id="howitworks" class="steps-block">
+        <h2>InsiderMap for your business</h2>
+        <br/>
+        <div class="col-md-2 col-md-offset-3">
+          <h2><span class="glyphicon glyphicon-globe" aria-hidden="true"></span><br/><span class="grey-font">The Map</span></h2>
+          <p>It all starts with a map of your campus that needs to be mapped to geo coordinaties.</p>
+        </div>
+        <div class="col-md-2">
+          <h2><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><br/><span class="grey-font">Annotations</span></h2>
+          <p>The map is annotated with building names, eventual nick-names and facilities. </p>
+        </div>
+        <div class="col-md-2">
+          <h2><span class="glyphicon glyphicon-gift" aria-hidden="true"></span><br/><span class="grey-font">Customisations</span></h2>
+          <p>Design and functionality customisations can be made to make your app personal. </p>
+        </div>
+      </div>
+      <div class="pricing-block">
+        <p class="lead">Get in touch with us to get your own customised map. <br/ >Here's just a preview of the basic packages we can offer.</p><br/>
+        <div class="col-md-3 col-md-offset-3">
+          <h3><font color="#2facb2">BASIC</font></h3>
+          <p><span class="grey-font">includes</span></p>
+          <br/>
+          <p>Map of your campus</p>
+          <p>Annotations of buidlings and facilities</p>
+          <p>Search and directions</p>
+          <p>Deployment on internal store</p>
+          <p>Support on post-release updates</p>
+        </div>
+        <div class="col-md-3">
+          <h3><font color="#1b6d91">PLUS</font></h3>
+          <p><span class="grey-font">includes the Basic <br/>plus one or more of</span></p>
+          <br/>
+          <p>Implementation of multiple-sites maps</p>
+          <p>Integration from Active Directory or other internal sources</p>
+          <p>Other customisations</p>
+          <p>Integration in the public InsiderMap app</p>
+        </div>
+      </div>
+
+      <div id="aboutus" class="aboutus-block">
+        <h2>About Us</h2>
+        <br/>
+        <div class="col-md-2 col-md-offset-2">
+          <br/>
+          <img class="img-responsive center-block" src="images/paula.png" height="300px">
+        </div>
+        <div class="col-md-2">
+          <h3><span class="light-grey-font">/PAULA</span></h3>
+          <p class="lead">Director and Chief iOS Developer at MonoHelix.</p>
+          <p>Can live on Soylent, but not for long.</p>
+        </div>
+        <div class="col-md-2">
+          <br/>
+          <img class="img-responsive center-block" src="images/radu.png" height="300px">
+        </div>
+        <div class="col-md-2">
+          <h3><span class="light-grey-font">/RADU</span></h3>
+          <p class="lead">Director and Chief Geo Analyst at MonoHelix.</p>
+          <p>Can easily spend hours looking at maps.</p>
+        </div>
+      </div>
+
+      <div id="contact" class="contact-block">
+        <div class="col-md-3 col-md-offset-2">
+          <h5>ABOUT</h5>
+          <br/>
+          InsiderMap is a mobile application developed by <a href="http://monohelix.com">MonoHelix</a>, a small company working within the area of software development, data analysis, consulting and publishing.
+        </div>
+        <div class="col-md-3">
+          <h5>CONTACT</h5>
+          <br/>
+          Contact us at contact@monohelix.com or through social media channels. 
+          <br/><br/>
+          [fb, twitter et al]
+        </div>
+        <div class="col-md-3">
+          <h5>DOWNLOAD</h5>
+          <br/>
+          Download the free public app from the AppStore or check your company app store if you have an InsiderMap app for your company.
+          <br/><br/>
+          AppStore
+        </div>
+      </div>
+
+    <!--</div>--><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
